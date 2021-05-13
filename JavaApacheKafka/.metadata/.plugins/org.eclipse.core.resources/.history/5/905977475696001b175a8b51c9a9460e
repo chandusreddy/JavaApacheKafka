@@ -1,0 +1,20 @@
+package com.chandu.kafka.datastream;
+
+import java.util.Properties;
+
+public class Producer {
+
+	public static void main(String[] args) {
+		System.out.println("Hello world! from Producer");
+		
+		// Create the Producer Properties
+		Properties properties = new Properties();
+		properties.setProperty("bootstrap.servers", "127.0.0.1:9092");
+		
+		
+		// Create the Producer
+		
+		//Send the data
+	}
+
+}

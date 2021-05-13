@@ -1,0 +1,14 @@
+package com.chandu.kafka.datastream.consumer;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+public class Consumer {
+
+	public static void main(String[] args) {
+		System.out.println("Hello world from Consumer: ");
+		
+		Logger logger = LoggerFactory.getLogger(Consumer.class);
+	}
+
+}

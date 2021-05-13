@@ -1,0 +1,56 @@
+package com.chandu.kafka.datastream.consumer;
+
+import org.apache.http.auth.AuthScope;
+import org.apache.http.client.CredentialsProvider;
+import org.apache.http.impl.client.BasicCredentialsProvider;
+import org.elasticsearch.client.RestHighLevelClient;
+
+public class ElasticSearchConsumer {
+	
+	
+	public static RestHighLevelClient createClient() {
+		
+		String hostname ="";
+		String username ="";
+		String password = "";
+		
+		final CredentialsProvider credentialProvider = new BasicCredentialsProvider();
+		
+		credentialProvider.setCredentials(AuthScope.ANY, new UserNamePasswordCredentials(username,password));
+		
+		
+		
+		
+		
+		
+		return null;
+		
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	public static void main(String[] args) {
+		
+	}
+	
+	
+
+}

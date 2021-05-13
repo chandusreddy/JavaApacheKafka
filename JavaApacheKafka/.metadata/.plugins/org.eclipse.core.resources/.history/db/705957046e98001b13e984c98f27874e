@@ -1,0 +1,48 @@
+package com.chandu.kafka.datastream.consumer;
+
+import org.apache.http.HttpHost;
+import org.apache.http.auth.AuthScope;
+import org.apache.http.auth.UsernamePasswordCredentials;
+import org.apache.http.client.CredentialsProvider;
+import org.apache.http.impl.client.BasicCredentialsProvider;
+import org.apache.http.impl.nio.client.HttpAsyncClientBuilder;
+import org.elasticsearch.client.RestClient;
+import org.elasticsearch.client.RestClientBuilder;
+import org.elasticsearch.client.RestHighLevelClient;
+
+public class ElasticSearchConsumer {
+
+	public static RestHighLevelClient createClient() {
+
+		//Replace with your own Credentials
+		String hostname = "kafka-stream-8077083392.us-east-1.bonsaisearch.net";
+		String username = "vsa6i6uglz";
+		String password = "spupc0yws2";
+
+		// DO NOT Create if you run a Local Elastic Search - Use this if you are running in the Cloud
+		final CredentialsProvider credentialProvider = new BasicCredentialsProvider();
+		credentialProvider.setCredentials(AuthScope.ANY, new UsernamePasswordCredentials(username, password));
+
+		RestClientBuilder builder = RestClient.builder(new HttpHost(hostname, 443, "https"))
+				.setHttpClientConfigCallback(new RestClientBuilder.HttpClientConfigCallback() {
+
+					@Override
+					public HttpAsyncClientBuilder customizeHttpClient(HttpAsyncClientBuilder httpClientBuilder) {
+						return httpClientBuilder.setDefaultCredentialsProvider(credentialProvider);
+
+					}
+				});
+		RestHighLevelClient client = new RestHighLevelClient(builder);
+		return client;
+
+	}
+
+	public static void main(String[] args) {
+		
+		RestHighLevelClient client = createClient();
+		
+		
+
+	}
+
+}

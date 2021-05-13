@@ -1,0 +1,23 @@
+package com.chandu.kafka.datastream.producer;
+
+public class TwitterProducer {
+	
+	public TwitterProducer() {
+		
+	}
+	
+	
+	
+	public static void main(String[] args) {
+		System.out.println("Hello world");
+		
+		//Create a Twitter Client
+		
+		// Create a Kafka Producer
+		
+		// Loop to send tweets to Kafka
+		
+		
+	}
+
+}

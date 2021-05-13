@@ -1,0 +1,51 @@
+package com.chandu.kafka.datastream.consumer;
+
+import org.elasticsearch.client.RestHighLevelClient;
+
+public class ElasticSearchConsumer {
+	
+	
+	public static RestHighLevelClient createClient() {
+		
+		String hostname ="";
+		String username ="";
+		String password = "";
+		
+		
+		
+		
+		
+		
+		
+		
+		return null;
+		
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	public static void main(String[] args) {
+		
+	}
+	
+	
+
+}

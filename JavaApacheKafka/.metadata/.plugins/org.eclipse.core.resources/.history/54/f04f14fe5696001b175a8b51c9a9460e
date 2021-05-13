@@ -1,0 +1,33 @@
+package com.chandu.kafka.datastream;
+
+import java.util.Properties;
+
+import org.apache.kafka.clients.producer.ProducerConfig;
+//import org.apache.kafka.common.serialization.StringSerializer;
+
+public class Producer {
+
+	public static void main(String[] args) {
+		System.out.println("Hello world! from Producer");
+
+		// Create the Producer Properties
+		Properties properties = new Properties();
+
+		/**
+		 * Hardcoding the propery values String BOOTSTRAP_SERVERS = "127.0.0.1:9092";
+		 * properties.setProperty("value.serializer", StringSerializer.class.getName());
+		 * properties.setProperty("key.serializer", StringSerializer.class.getName());
+		 * properties.setProperty("bootstrap.servers", "BOOTSTRAP_SERVERS");
+		 ***/
+
+		// Using the Apache Producer API constants.
+		properties.setProperty(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "BOOTSTRAP_SERVERS");
+		properties.setProperty(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, "BOOTSTRAP_SERVERS");
+		properties.setProperty(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, "BOOTSTRAP_SERVERS");
+
+		// Create the Producer
+
+		// Send the data
+	}
+
+}

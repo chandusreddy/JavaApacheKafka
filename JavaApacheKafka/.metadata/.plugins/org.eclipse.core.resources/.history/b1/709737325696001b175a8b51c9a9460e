@@ -1,0 +1,19 @@
+package com.chandu.kafka.datastream;
+
+import java.util.Properties;
+
+public class Producer {
+
+	public static void main(String[] args) {
+		System.out.println("Hello world! from Producer");
+		
+		// Create the Producer Properties
+		Properties properties = new Properties();
+		
+		
+		// Create the Producer
+		
+		//Send the data
+	}
+
+}

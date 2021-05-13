@@ -1,0 +1,9 @@
+package com.chandu.kafka.datastream.producer;
+
+public class TwitterProducer {
+	
+	public static void main(String[] args) {
+		System.out.println("Hello world");
+	}
+
+}

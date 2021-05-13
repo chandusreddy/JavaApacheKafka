@@ -1,0 +1,34 @@
+package com.chandu.kafka.datastream.producer;
+
+import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.LinkedBlockingQueue;
+
+public class TwitterProducer {
+
+	public TwitterProducer() {
+
+	}
+
+	public static void main(String[] args) {
+		new TwitterProducer().run();
+		System.out.println("Hello world");
+
+	}
+
+	public void run() {
+		// Create a Twitter Client
+
+		// Create a Kafka Producer
+
+		// Loop to send tweets to Kafka
+	}
+
+	public void createTwitterClient() {
+		/**
+		 * Set up your blocking queues: Be sure to size these properly based on expected
+		 * TPS of your stream
+		 */
+		BlockingQueue<String> msgQueue = new LinkedBlockingQueue<String>(100000);
+	}
+
+}
